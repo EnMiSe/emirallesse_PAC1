@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<link rel="stylesheet" href="css/estils.css">
+<script src="programes.js"></script>
+<html>
+<head>
+    <title>Formulari de Registre</title>
+</head>
+<body>
+    <div class=container>
+        <h1>Registre d'Usuari</h1>
+        <form action="processar_formulari" method="POST" onsubmit="return validarFormulari();">
+            <label for="username">Nom d'usuari:</label>
+            <input type="text" id="username" name="username" >
+            <br><br>
+            
+            <label for="email">Correu electrònic:</label>
+            <input type="email" id="email" name="email" >
+            <br><br>
+            
+            <label for="password">Contrasenya:</label>
+            <input type="password" id="password" name="password" >
+            <br><br>
+            
+            <label for="confirm_password">Confirmar Contrasenya:</label>
+            <input type="password" id="confirm_password" name="confirm_password" >
+            <br><br>
+
+            <label for="edat">Introdueixi la seva edat:</label>
+            <input type="age" id="age" name="age" >
+            <br><br>
+            
+            <input type="submit" value="submit">
+        </form>
+    </div>
+</body>
+</html>
