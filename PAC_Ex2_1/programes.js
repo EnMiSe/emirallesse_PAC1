@@ -46,6 +46,7 @@ function validarEmail(email) {
     return regex.test(email);
 }
 
-
-
-/* Programa validació edat */
+function validarContrasenya(password) {
+    var regex = /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[`~!@#$%^&*()_+\-=\{\}\|\[\]\\:";'<>?.,/]).{8,}$/;
+    return regex.test(password);
+}

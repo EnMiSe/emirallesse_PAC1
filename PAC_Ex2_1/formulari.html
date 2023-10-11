@@ -2,35 +2,69 @@
 <link rel="stylesheet" href="css/estils.css">
 <script src="programes.js"></script>
 <html>
+
 <head>
     <title>Formulari de Registre</title>
 </head>
+
 <body>
     <div class=container>
         <h1>Registre d'Usuari</h1>
-        <form action=""  onsubmit="return validarFormulari();">
+        <form action="" onsubmit="return validarFormulari();">
             <label for="username">Nom d'usuari:</label>
-            <input type="text" id="username" name="username" >
-            <br><br>
-            
-            <label for="email">Correu electrònic:</label>
-            <input type="email" id="email" name="email" >
-            <br><br>
-            
-            <label for="password">Contrasenya:</label>
-            <input type="password" id="password" name="password" >
-            <br><br>
-            
-            <label for="confirm_password">Confirmar Contrasenya:</label>
-            <input type="password" id="confirm_password" name="confirm_password" >
+            <input type="text" id="username" name="username">
             <br><br>
 
-            <label for="edat">Introdueixi la seva edat:</label>
-            <input type="number" id="age" name="age" >
+            <div class="error-message" id="username-error">
+                <label for="username">Nom d'usuari:</label>
+                <input type="text" id="username" name="username">
+                <br><br>
+            </div>
+
+            <label for="email">Correu electrònic:</label>
+            <input type="email" id="email" name="email">
             <br><br>
-            
+
+            <div class="error-message" id="email-error">
+                <label for="email" onsubmit="return validarFormulari();">Correu electrònic:</label>
+                <input type="email" id="email" name="email">
+                <br><br>
+            </div>
+
+            <label for="password" onsubmit="return validarcontrasenya();">Contrasenya:</label>
+            <input type="password" id="password" name="password">
+            <br><br>
+
+            <div class="error-message" id="password-error">
+                <label for="password">Contrasenya:</label>
+                <input type="password" id="password" name="password">
+                <br><br>
+            </div>
+
+            <label for="confirm_password" onsubmit="return validarcontrasenya();">Confirmar Contrasenya:</label>
+            <input type="password" id="confirm_password" name="confirm_password">
+            <br><br>
+
+            <div class="error-message" id="confirm_password-error">
+
+                <label for="confirm_password">Confirmar Contrasenya:</label>
+                <input type="password" id="confirm_password" name="confirm_password">
+                <br><br>
+            </div>
+
+            <label for="edat">Introdueixi la seva edat:</label>
+            <input type="number" id="age" name="age">
+            <br><br>
+
+            <div class="error-message" id="age-error">
+                <label for="age">Introdueixi la seva edat:</label>
+                <input type="number" id="age" name="age">
+                <br><br>
+            </div>
+
             <input type="submit" value="submit">
         </form>
     </div>
 </body>
+
 </html>
