@@ -1,16 +1,44 @@
 <!DOCTYPE html>
 <html lang="ca">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Reserva de Entradas de Cine</title>
+    <title>Reserva de Entrades de Cine</title>
     <link rel="stylesheet" href="css/estils.css">
     <script src="programes.js"></script>
 </head>
+
 <body>
+<title>Palau Balania</title>
+
+    <div class="movieSelector">
+        <label> Selecciona una pel·licula:<label>
+                <select id="movie">
+                    <option ticketPrice="10">Endgame 10$</option>
+                    <option ticketPrice="9">Shutter Island 9$</option>
+                    <option ticketPrice="8">Cantando bajo la lluvia 7$</option>
+                </select>
+    </div>
+
+    <ul class="typeSeat">
+        <li>
+          <div class="seat"></div>
+          <label>Lliure</label>
+        </li>
+        <li>
+          <div class="seat selected"></div>
+          <label>Seleccionat</label>
+        </li>
+        <li>
+          <div class="seat occupied"></div>
+          <label>Reservat</label>
+        </li>
+      </ul>
+
     <h1>Selecciona els seients</h1>
     <div class="seating-plan">
-
+        <div class="screen"></div>
         <div class="row">
             <div class="seat"></div>
             <div class="seat"></div>
@@ -55,4 +83,5 @@
     </div>
     <script src="script.js"></script>
 </body>
+
 </html>

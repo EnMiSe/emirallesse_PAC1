@@ -1,23 +1,106 @@
 <!DOCTYPE html>
 <html>
+
 <head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta http-equiv="X-UA-Compatible" content="ie=edge" />
   <link rel="stylesheet" type="text/css" href="css/estils.css">
-  <script src="conversio.js"></script>
 </head>
+
 <body>
-  <div class="currency-converter">
-    <h2>Calculadora Canvi Moneda</h2>
-    <div class="input-container">
-      <input type="number" id="amount" placeholder="Quantitat">
-      <select id="fromCurrency"></select>
+  <h1>Calculadora Canvi Moneda</h1>
+  <div class="container">
+    <div class="divisa">
+      <select id="divisa1">
+        <option value="EUR">EUR</option>
+        <option value="USD" selected>USD</option>
+        <option value="JPY">JPY</option>
+        <option value="BGN">BGN</option>
+        <option value="CZK">CZK</option>
+        <option value="DKK">DKK</option>
+        <option value="GBP">GBP</option>
+        <option value="HUF">HUF</option>
+        <option value="PLN">PLN</option>
+        <option value="RON">RON</option>
+        <option value="SEK">SEK</option>
+        <option value="CHF">CHF</option>
+        <option value="ISK">ISK</option>
+        <option value="NOK">NOK</option>
+        <option value="HRK">HRK</option>
+        <option value="RUB">RUB</option>
+        <option value="TRY">TRY</option>
+        <option value="AUD">AUD</option>
+        <option value="BRL">BRL</option>
+        <option value="CAD">CAD</option>
+        <option value="CNY">CNY</option>
+        <option value="HKD">HKD</option>
+        <option value="IDR">IDR</option>
+        <option value="ILS">ILS</option>
+        <option value="INR">INR</option>
+        <option value="KRW">KRW</option>
+        <option value="MXN">MXN</option>
+        <option value="MYR">MYR</option>
+        <option value="NZD">NZD</option>
+        <option value="PHP">PHP</option>
+        <option value="SGD">SGD</option>
+        <option value="THB">THB</option>
+        <option value="ZAR">ZAR</option>
+      </select>
+
+      <input type="number" id="cuantia1" placeholder="0" value="1" min="0" />
     </div>
-    <div class="input-container">
-      <input type="text" id="result" placeholder="Conversió" readonly>
-      <select id="toCurrency"></select>
+
+    <div class="swap-rate-container">
+      <button class="btn" id="swap">
+        Swap
+      </button>
+      <div class="rate" id="rate"></div>
     </div>
-    <button id="convert">Convertir</button>
+
+    <div class="divisa">
+      <select id="divisa2">
+        <option value="EUR" selected>EUR</option>
+        <option value="USD">USD</option>
+        <option value="JPY">JPY</option>
+        <option value="BGN">BGN</option>
+        <option value="CZK">CZK</option>
+        <option value="DKK">DKK</option>
+        <option value="GBP">GBP</option>
+        <option value="HUF">HUF</option>
+        <option value="PLN">PLN</option>
+        <option value="RON">RON</option>
+        <option value="SEK">SEK</option>
+        <option value="CHF">CHF</option>
+        <option value="ISK">ISK</option>
+        <option value="NOK">NOK</option>
+        <option value="HRK">HRK</option>
+        <option value="RUB">RUB</option>
+        <option value="TRY">TRY</option>
+        <option value="AUD">AUD</option>
+        <option value="BRL">BRL</option>
+        <option value="CAD">CAD</option>
+        <option value="CNY">CNY</option>
+        <option value="HKD">HKD</option>
+        <option value="IDR">IDR</option>
+        <option value="ILS">ILS</option>
+        <option value="INR">INR</option>
+        <option value="KRW">KRW</option>
+        <option value="MXN">MXN</option>
+        <option value="MYR">MYR</option>
+        <option value="NZD">NZD</option>
+        <option value="PHP">PHP</option>
+        <option value="SGD">SGD</option>
+        <option value="THB">THB</option>
+        <option value="ZAR">ZAR</option>
+      </select>
+      <input type="number" id="cuantia2" placeholder="0" min="0" />
+    </div>
   </div>
+  <p id="loading-msg"></p>
 
 
 </body>
+<script src="conversio.js"></script>
+
 </html>

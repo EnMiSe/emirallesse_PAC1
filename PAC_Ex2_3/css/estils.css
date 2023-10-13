@@ -18,6 +18,21 @@ h1 {
     margin: 5px;
 }
 
+.typeSeat {
+    margin-left: 35%;
+    margin-right: 35%;
+    padding: 5px 10px;
+    border-radius: 5px;
+    list-style-type: none;
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .typeSeat li {
+    display: flex;
+    align-items: center;
+  }
+
 .seat {
     width: 40px;
     height: 40px;
@@ -27,8 +42,12 @@ h1 {
 }
 
 .seat.selected {
-    background-color: #FF5733;
+    background-color: #039b93;
 }
+
+.seat.occupied {
+    background-color: #c70505;
+  }
 
 .checkout {
     margin-top: 20px;
@@ -45,3 +64,10 @@ button {
 button:hover {
     background-color: #45a049;
 }
+
+.screen {
+    background-color: #524d4d;
+    margin: 30px 0;
+    width: 300px;
+    height: 90px;
+  }

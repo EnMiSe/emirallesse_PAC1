@@ -4,7 +4,7 @@ const total = document.getElementById('total');
 const checkoutButton = document.getElementById('checkout-button');
 
 let selectedSeats = [];
-let ticketPrice = 10; // Precio de la entrada
+let ticketPrice = 10; 
 
 // Actualiza la cuenta y el total
 function updateSelectedCount() {
