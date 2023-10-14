@@ -16,7 +16,6 @@ function calculate() {
   fetch(`https://v6.exchangerate-api.com/v6/a30cb4ce95385ac2b629e210/latest/${divisa1}`)
     .then(res => res.json())
     .then(data => {
-      console.log('Makina:', data);
       const rate = data.conversion_rates[divisa2];
       rateEl.innerText = `1 ${divisa1} = ${rate} ${divisa2}`;
       valorCuantia2.value = (valorCuantia1.value * rate).toFixed(2);
@@ -31,7 +30,6 @@ function calculate() {
 
 }
 
-// Event listeners
 valorDivisa1.addEventListener('change', calculate);
 valorCuantia1.addEventListener('input', calculate);
 valorDivisa2.addEventListener('change', calculate);

@@ -1,15 +1,80 @@
 body {
-    text-align: center;
-    font-family: Arial, sans-serif;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #f5f5f5;
+    margin: 0;
+    padding: 0;
 }
 
-h1 {
-    margin-top: 20px;
+.container {
+    width: 80%;
+    max-width: 600px;
+    margin: 40px auto;
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
 }
 
-.seating-plan {
+label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: bold;
+}
+
+select {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 20px;
+    border-radius: 4px;
+    border: 1px solid #ccc;
+    appearance: none;
+    font-size: 16px;
+}
+
+.screen {
+    background-color: #524d4d;
+    margin-left: 25%;
+    margin-right: 25%;
+    margin-bottom: 20px;
+    width: 300px;
+    height: 90px;
+}
+.seats {
     display: flex;
     flex-direction: column;
+    align-items: center;
+}
+
+.seat {
+    width: 35px;
+    height: 35px;
+    border-radius: 4px;
+    background-color: #ddd;
+    cursor: pointer;
+    transition: background-color 0.2s;
+    margin: 5px;
+}
+
+#ocupat {
+    background-color: #c70505;
+}
+
+#seleccionat {
+    background-color: #039b93;
+}
+
+.typeSeat {
+    margin-left: 18%;
+    margin-right: 18%;
+    padding: 5px 10px;
+    border-radius: 5px;
+    list-style-type: none;
+    display: flex;
+    justify-content: space-between;
+}
+
+.typeSeat li {
+    display: flex;
     align-items: center;
 }
 
@@ -18,56 +83,25 @@ h1 {
     margin: 5px;
 }
 
-.typeSeat {
-    margin-left: 35%;
-    margin-right: 35%;
-    padding: 5px 10px;
-    border-radius: 5px;
-    list-style-type: none;
-    display: flex;
-    justify-content: space-between;
-  }
-
-  .typeSeat li {
-    display: flex;
-    align-items: center;
-  }
-
-.seat {
-    width: 40px;
-    height: 40px;
-    margin: 5px;
-    background-color: #ccc;
-    cursor: pointer;
+.seat:hover {
+    background-color: #b5b5b5;
 }
 
-.seat.selected {
+.seat[data-status="occupied"] {
+    background-color: #c70505;
+    cursor: not-allowed;
+}
+
+.seat[data-status="selected"] {
     background-color: #039b93;
 }
 
-.seat.occupied {
-    background-color: #c70505;
-  }
-
-.checkout {
+p {
     margin-top: 20px;
+    font-weight: bold;
+    font-size: 16px;
 }
 
-button {
-    background-color: #4CAF50;
-    color: white;
-    border: none;
-    padding: 10px 20px;
-    cursor: pointer;
+span {
+    color: #333;
 }
-
-button:hover {
-    background-color: #45a049;
-}
-
-.screen {
-    background-color: #524d4d;
-    margin: 30px 0;
-    width: 300px;
-    height: 90px;
-  }

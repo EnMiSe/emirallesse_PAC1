@@ -4,84 +4,88 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Reserva de Entrades de Cine</title>
+    <title>Reserva de seients</title>
     <link rel="stylesheet" href="css/estils.css">
-    <script src="programes.js"></script>
 </head>
 
 <body>
-<title>Palau Balania</title>
 
-    <div class="movieSelector">
-        <label> Selecciona una pel·licula:<label>
-                <select id="movie">
-                    <option ticketPrice="10">Endgame 10$</option>
-                    <option ticketPrice="9">Shutter Island 9$</option>
-                    <option ticketPrice="8">Cantando bajo la lluvia 7$</option>
-                </select>
-    </div>
+    <div class="container">
+        <label>Escull moneda:</label>
+        <select id="currency">
+            <option value="USD">USD</option>
+            <option value="EUR">EUR</option>
+            <option value="JPY">JPY</option>
+            <option value="BGN">BGN</option>
+            <option value="CZK">CZK</option>
+        </select>
 
-    <ul class="typeSeat">
-        <li>
-          <div class="seat"></div>
-          <label>Lliure</label>
-        </li>
-        <li>
-          <div class="seat selected"></div>
-          <label>Seleccionat</label>
-        </li>
-        <li>
-          <div class="seat occupied"></div>
-          <label>Reservat</label>
-        </li>
-      </ul>
+        <label>Tria una pel·lícula:</label>
+        <select id="movie">
+            <option value="9">Avengers: Endgame 9$</option>
+            <option value="8.5">Shutter Island 8.5$</option>
+            <option value="7">Cantando Bajo la Lluvia 7$</option>
+        </select>
 
-    <h1>Selecciona els seients</h1>
-    <div class="seating-plan">
+        <ul class="typeSeat">
+            <li>
+                <div class="seat"></div>
+                <label>Lliure</label>
+            </li>
+            <li>
+                <div class="seat select" id="seleccionat"></div>
+                <label>Seleccionat</label>
+            </li>
+            <li>
+                <div class="seat occupied" id="ocupat"></div>
+                <label>Reservat</label>
+            </li>
+        </ul>
+
         <div class="screen"></div>
-        <div class="row">
-            <div class="seat"></div>
-            <div class="seat"></div>
-            <div class="seat"></div>
-            <div class="seat"></div>
-            <div class="seat"></div>
+
+        <div class="seats">
+
+            <div class="row">
+                <div class="seat" data-status="available"></div>
+                <div class="seat" data-status="available"></div>
+                <div class="seat" data-status="available"></div>
+                <div class="seat" data-status="available"></div>
+                <div class="seat" data-status="occupied"></div>
+            </div>
+            <div class="row">
+                <div class="seat" data-status="occupied"></div>
+                <div class="seat" data-status="available"></div>
+                <div class="seat" data-status="available"></div>
+                <div class="seat" data-status="occupied"></div>
+                <div class="seat" data-status="occupied"></div>
+            </div>
+            <div class="row">
+                <div class="seat" data-status="available"></div>
+                <div class="seat" data-status="available"></div>
+                <div class="seat" data-status="available"></div>
+                <div class="seat" data-status="available"></div>
+                <div class="seat" data-status="available"></div>
+                <div class="seat" data-status="available"></div>
+                <div class="seat" data-status="available"></div>
+            </div>
+
+            <div class="row">
+                <div class="seat" data-status="occupied"></div>
+                <div class="seat" data-status="occupied"></div>
+                <div class="seat" data-status="occupied"></div>
+                <div class="seat" data-status="available"></div>
+                <div class="seat" data-status="occupied"></div>
+                <div class="seat" data-status="available"></div>
+                <div class="seat" data-status="available"></div>
+
+            </div>
+
+            <p>Tens <span id="selectedSeatsCount">0</span> seients seleccionats amb un preu de <span
+                    id="totalPrice">0</span> <span id="currentCurrency"></span> <span id=""></span></p>
         </div>
 
-        <div class="row">
-            <div class="seat"></div>
-            <div class="seat"></div>
-            <div class="seat"></div>
-            <div class="seat"></div>
-            <div class="seat"></div>
-        </div>
-
-        <div class="row">
-            <div class="seat"></div>
-            <div class="seat"></div>
-            <div class="seat"></div>
-            <div class="seat"></div>
-            <div class="seat"></div>
-            <div class="seat"></div>
-            <div class="seat"></div>
-        </div>
-
-        <div class="row">
-            <div class="seat"></div>
-            <div class="seat"></div>
-            <div class="seat"></div>
-            <div class="seat"></div>
-            <div class="seat"></div>
-            <div class="seat"></div>
-            <div class="seat"></div>
-        </div>
-
-    </div>
-    <div class="checkout">
-        <p>Seleccionats: <span id="count">0</span> seients</p>
-        <p>Total a pagar: $<span id="total">0</span></p>
-        <button id="checkout-button">Reservar</button>
-    </div>
-    <script src="script.js"></script>
+        <script src="gestio_reserva.js"></script>
 </body>
 
 </html>
