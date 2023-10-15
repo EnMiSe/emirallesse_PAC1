@@ -1,70 +1,48 @@
 <!DOCTYPE html>
-<link rel="stylesheet" href="css/estils.css">
-<script src="programes.js"></script>
-<html>
-
+<html lang="ca">
 <head>
-    <title>Formulari de Registre</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulari</title>
+    <link rel="stylesheet" href="css/estils.css">
 </head>
-
 <body>
-    <div class=container>
-        <h1>Registre d'Usuari</h1>
-        <form action="" onsubmit="return validarFormulari();">
-            <label for="username">Nom d'usuari:</label>
-            <input type="text" id="username" name="username">
-            <br><br>
-
-            <div class="error-message" id="username-error">
-                <label for="username">Nom d'usuari:</label>
-                <input type="text" id="username" name="username">
-                <br><br>
+    <div class="container">
+        <h1>Formulari de registre</h1>
+        <form id="registerForm">
+            <div class="input-field">
+                <label for="username">Usuari</label>
+                <input type="text" id="username" name="username" placeholder="Enter username">
+                <span class="error">L'usuari ha de contenir almenys 3 caràcters</span>
             </div>
 
-            <label for="email">Correu electrònic:</label>
-            <input type="email" id="email" name="email">
-            <br><br>
-
-            <div class="error-message" id="email-error">
-                <label for="email" onsubmit="return validarFormulari();">Correu electrònic:</label>
-                <input type="email" id="email" name="email">
-                <br><br>
+            <div class="input-field">
+                <label for="email">Email</label>
+                <input type="email" id="email" name="email" placeholder="Enter email">
+                <span class="error">Email no vàlid</span>
             </div>
 
-            <label for="password" onsubmit="return validarcontrasenya();">Contrasenya:</label>
-            <input type="password" id="password" name="password">
-            <br><br>
-
-            <div class="error-message" id="password-error">
-                <label for="password">Contrasenya:</label>
-                <input type="password" id="password" name="password">
-                <br><br>
+            <div class="input-field">
+                <label for="password">Contrasenya</label>
+                <input type="password" id="password" name="password" placeholder="Enter password">
+                <span class="error">La contrasenya ha de contenir 8 caràcters</span>
             </div>
 
-            <label for="confirm_password" onsubmit="return validarcontrasenya();">Confirmar Contrasenya:</label>
-            <input type="password" id="confirm_password" name="confirm_password">
-            <br><br>
-
-            <div class="error-message" id="confirm_password-error">
-
-                <label for="confirm_password">Confirmar Contrasenya:</label>
-                <input type="password" id="confirm_password" name="confirm_password">
-                <br><br>
+            <div class="input-field">
+                <label for="confirm-password">Confirmar Contrasenya</label>
+                <input type="password" id="confirm-password" name="confirm-password" placeholder="Enter password again">
+                <span class="error">Es necessita contrasenya</span>
             </div>
 
-            <label for="edat">Introdueixi la seva edat:</label>
-            <input type="number" id="age" name="age">
-            <br><br>
-
-            <div class="error-message" id="age-error">
-                <label for="age">Introdueixi la seva edat:</label>
-                <input type="number" id="age" name="age">
-                <br><br>
+            <div class="input-field">
+                <label for="age">Edat</label>
+                <input type="number" id="age" name="age" placeholder="Enter age">
+                <span class="error">L'edat ha de ser major o igual a 0 i inferior a 1000</span>
             </div>
 
-            <input type="submit" value="submit">
+            <button type="submit">Submit</button>
         </form>
     </div>
+    <script src="script.js"></script>
 </body>
-
 </html>
